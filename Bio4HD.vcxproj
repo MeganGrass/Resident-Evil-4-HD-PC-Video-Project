@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dllmain.h" />
+    <ClInclude Include="Dll\inject.h" />
+    <ClInclude Include="Exec\bio4pc_av.h" />
+    <ClInclude Include="Exec\bio4pc_config.h" />
+    <ClInclude Include="Exec\bio4pc_debug.h" />
+    <ClInclude Include="Exec\bio4pc_dx9.h" />
+    <ClInclude Include="Exec\bio4pc_exe.h" />
+    <ClInclude Include="Exec\bio4pc_func.h" />
+    <ClInclude Include="Exec\bio4pc_hwnd.h" />
+    <ClInclude Include="Exec\bio4pc_print.h" />
+    <ClInclude Include="Exec\bio4pc_screen.h" />
+    <ClInclude Include="Exec\bio4_flag.h" />
+    <ClInclude Include="System\system.h" />
+    <ClInclude Include="Windows\framework.h" />
+    <ClInclude Include="Windows\Resource.h" />
+    <ClInclude Include="Windows\targetver.h" />
+    <ClInclude Include="WinMM\winmm.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Dll\inject.cpp" />
+    <ClCompile Include="Exec\bio4pc_av.cpp" />
+    <ClCompile Include="Exec\bio4pc_config.cpp" />
+    <ClCompile Include="Exec\bio4pc_debug.cpp" />
+    <ClCompile Include="Exec\bio4pc_dx9.cpp" />
+    <ClCompile Include="Exec\bio4pc_exe.cpp" />
+    <ClCompile Include="Exec\bio4pc_func.cpp" />
+    <ClCompile Include="Exec\bio4pc_hwnd.cpp" />
+    <ClCompile Include="Exec\bio4pc_print.cpp" />
+    <ClCompile Include="Exec\bio4pc_screen.cpp" />
+    <ClCompile Include="Exec\bio4_flag.cpp" />
+    <ClCompile Include="System\file.cpp" />
+    <ClCompile Include="System\fileA.cpp" />
+    <ClCompile Include="System\fileW.cpp" />
+    <ClCompile Include="System\std_text.cpp" />
+    <ClCompile Include="System\stringA.cpp" />
+    <ClCompile Include="System\stringW.cpp" />
+    <ClCompile Include="System\type.cpp" />
+    <ClCompile Include="WinMM\winmm.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Windows\Resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WinMM\winmm.def" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{91c09e5a-2313-4251-bce0-ff7fc1c40330}</ProjectGuid>
+    <RootNamespace>Bio4HD</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>winmm</TargetName>
+    <OutDir>C:\Program Files (x86)\Steam\steamapps\common\Resident Evil 4\Bin32\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>winmm</TargetName>
+    <OutDir>C:\Program Files (x86)\Steam\steamapps\common\Resident Evil 4\Bin32\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;SYSTEM="C:\Bio4HD\System\system.h";FRAMEWORK="$(SolutionDir)Windows\framework.h";APPLICATION_NAME_A="$(ProjectName)";APPLICATION_NAME_W=L"$(ProjectName)";APPLICATION_VER=__TIMESTAMP__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>Default</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Megan\Desktop\Video_Codec_SDK_11.0.10\Samples\AppDecode\AppDecD3D\..\..\External\FFmpeg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Lib\Win32\avcodec.lib;Lib\Win32\avformat.lib;Lib\Win32\avutil.lib;Lib\Win32\swresample.lib;Lib\Win32\libswscale.a;d3d9.lib;dxva2.lib;d3dcompiler.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>C:\Bio4HD\WinMM\winmm.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;SYSTEM="C:\Bio4HD\System\system.h";FRAMEWORK="$(SolutionDir)Windows\framework.h";APPLICATION_NAME_A="$(ProjectName)";APPLICATION_NAME_W=L"$(ProjectName)";APPLICATION_VER=__TIMESTAMP__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>Default</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Megan\Desktop\Video_Codec_SDK_11.0.10\Samples\AppDecode\AppDecD3D\..\..\External\FFmpeg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <UseFullPaths>false</UseFullPaths>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Lib\Win32\avcodec.lib;Lib\Win32\avformat.lib;Lib\Win32\avutil.lib;Lib\Win32\swresample.lib;Lib\Win32\libswscale.a;d3d9.lib;dxva2.lib;d3dcompiler.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>C:\Bio4HD\WinMM\winmm.def</ModuleDefinitionFile>
+      <LinkTimeCodeGeneration />
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.0\include;C:\Users\Megan\Desktop\Video_Codec_SDK_11.0.10\Samples\..\Interface;C:\Users\Megan\Desktop\Video_Codec_SDK_11.0.10\Samples\Utils;C:\Users\Megan\Desktop\Video_Codec_SDK_11.0.10\Samples\NvCodec;C:\Users\Megan\Desktop\Video_Codec_SDK_11.0.10\Samples\AppDecode\Common;C:\Users\Megan\Desktop\Video_Codec_SDK_11.0.10\Samples\AppDecode\AppDecD3D\..\..\External\FFmpeg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

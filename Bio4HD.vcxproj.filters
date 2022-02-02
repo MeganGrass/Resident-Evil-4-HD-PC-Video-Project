@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Dll">
+      <UniqueIdentifier>{fa617e33-1518-4774-b1a1-cc701d08bdf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exec">
+      <UniqueIdentifier>{8e4cd1a7-1b57-473e-a1eb-314d3a60e96d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{c9d2a830-fe9d-4e49-a2b4-01e4bcbb2faa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows">
+      <UniqueIdentifier>{0022ddb0-a063-46e2-b759-ba77ddc43284}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WinMM">
+      <UniqueIdentifier>{7933890a-c80f-4648-a3ee-d5981c462fab}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dll\inject.h">
+      <Filter>Dll</Filter>
+    </ClInclude>
+    <ClInclude Include="Exec\bio4_flag.h">
+      <Filter>Exec</Filter>
+    </ClInclude>
+    <ClInclude Include="Exec\bio4pc_av.h">
+      <Filter>Exec</Filter>
+    </ClInclude>
+    <ClInclude Include="Exec\bio4pc_config.h">
+      <Filter>Exec</Filter>
+    </ClInclude>
+    <ClInclude Include="Exec\bio4pc_debug.h">
+      <Filter>Exec</Filter>
+    </ClInclude>
+    <ClInclude Include="Exec\bio4pc_dx9.h">
+      <Filter>Exec</Filter>
+    </ClInclude>
+    <ClInclude Include="Exec\bio4pc_exe.h">
+      <Filter>Exec</Filter>
+    </ClInclude>
+    <ClInclude Include="Exec\bio4pc_func.h">
+      <Filter>Exec</Filter>
+    </ClInclude>
+    <ClInclude Include="Exec\bio4pc_hwnd.h">
+      <Filter>Exec</Filter>
+    </ClInclude>
+    <ClInclude Include="Exec\bio4pc_print.h">
+      <Filter>Exec</Filter>
+    </ClInclude>
+    <ClInclude Include="Exec\bio4pc_screen.h">
+      <Filter>Exec</Filter>
+    </ClInclude>
+    <ClInclude Include="System\system.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\framework.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\Resource.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows\targetver.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="WinMM\winmm.h">
+      <Filter>WinMM</Filter>
+    </ClInclude>
+    <ClInclude Include="dllmain.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Dll\inject.cpp">
+      <Filter>Dll</Filter>
+    </ClCompile>
+    <ClCompile Include="Exec\bio4_flag.cpp">
+      <Filter>Exec</Filter>
+    </ClCompile>
+    <ClCompile Include="Exec\bio4pc_av.cpp">
+      <Filter>Exec</Filter>
+    </ClCompile>
+    <ClCompile Include="Exec\bio4pc_config.cpp">
+      <Filter>Exec</Filter>
+    </ClCompile>
+    <ClCompile Include="Exec\bio4pc_debug.cpp">
+      <Filter>Exec</Filter>
+    </ClCompile>
+    <ClCompile Include="Exec\bio4pc_dx9.cpp">
+      <Filter>Exec</Filter>
+    </ClCompile>
+    <ClCompile Include="Exec\bio4pc_exe.cpp">
+      <Filter>Exec</Filter>
+    </ClCompile>
+    <ClCompile Include="Exec\bio4pc_func.cpp">
+      <Filter>Exec</Filter>
+    </ClCompile>
+    <ClCompile Include="Exec\bio4pc_hwnd.cpp">
+      <Filter>Exec</Filter>
+    </ClCompile>
+    <ClCompile Include="Exec\bio4pc_print.cpp">
+      <Filter>Exec</Filter>
+    </ClCompile>
+    <ClCompile Include="Exec\bio4pc_screen.cpp">
+      <Filter>Exec</Filter>
+    </ClCompile>
+    <ClCompile Include="System\file.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\fileA.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\fileW.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\std_text.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\stringA.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\stringW.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="System\type.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="WinMM\winmm.cpp">
+      <Filter>WinMM</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Windows\Resource.rc">
+      <Filter>Windows</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WinMM\winmm.def">
+      <Filter>WinMM</Filter>
+    </None>
+  </ItemGroup>
+</Project>
