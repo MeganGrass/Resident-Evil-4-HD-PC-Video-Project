@@ -103,18 +103,22 @@
     <LinkIncremental>true</LinkIncremental>
     <TargetName>winmm</TargetName>
     <OutDir>C:\Program Files (x86)\Steam\steamapps\common\Resident Evil 4\Bin32\</OutDir>
+    <PublicIncludeDirectories>
+    </PublicIncludeDirectories>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>winmm</TargetName>
     <OutDir>C:\Program Files (x86)\Steam\steamapps\common\Resident Evil 4\Bin32\</OutDir>
+    <PublicIncludeDirectories>
+    </PublicIncludeDirectories>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;SYSTEM="C:\Bio4HD\System\system.h";FRAMEWORK="$(SolutionDir)Windows\framework.h";APPLICATION_NAME_A="$(ProjectName)";APPLICATION_NAME_W=L"$(ProjectName)";APPLICATION_VER=__TIMESTAMP__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>Default</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Megan\Desktop\Video_Codec_SDK_11.0.10\Samples\AppDecode\AppDecD3D\..\..\External\FFmpeg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>FFmpeg\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -125,7 +129,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>Lib\Win32\avcodec.lib;Lib\Win32\avformat.lib;Lib\Win32\avutil.lib;Lib\Win32\swresample.lib;Lib\Win32\libswscale.a;d3d9.lib;dxva2.lib;d3dcompiler.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>FFmpeg\Lib\Win32\avcodec.lib;FFmpeg\Lib\Win32\avformat.lib;FFmpeg\Lib\Win32\avutil.lib;FFmpeg\Lib\Win32\swresample.lib;FFmpeg\Lib\Win32\libswscale.a;d3d9.lib;dxva2.lib;d3dcompiler.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>C:\Bio4HD\WinMM\winmm.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
@@ -135,7 +139,7 @@
       <IntrinsicFunctions>false</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;SYSTEM="C:\Bio4HD\System\system.h";FRAMEWORK="$(SolutionDir)Windows\framework.h";APPLICATION_NAME_A="$(ProjectName)";APPLICATION_NAME_W=L"$(ProjectName)";APPLICATION_VER=__TIMESTAMP__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>Default</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Megan\Desktop\Video_Codec_SDK_11.0.10\Samples\AppDecode\AppDecD3D\..\..\External\FFmpeg\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>FFmpeg\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>None</DebugInformationFormat>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -145,7 +149,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Lib\Win32\avcodec.lib;Lib\Win32\avformat.lib;Lib\Win32\avutil.lib;Lib\Win32\swresample.lib;Lib\Win32\libswscale.a;d3d9.lib;dxva2.lib;d3dcompiler.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>FFmpeg\Lib\Win32\avcodec.lib;FFmpeg\Lib\Win32\avformat.lib;FFmpeg\Lib\Win32\avutil.lib;FFmpeg\Lib\Win32\swresample.lib;FFmpeg\Lib\Win32\libswscale.a;d3d9.lib;dxva2.lib;d3dcompiler.lib;d3d11.lib;dxgi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>C:\Bio4HD\WinMM\winmm.def</ModuleDefinitionFile>
       <LinkTimeCodeGeneration />
     </Link>
